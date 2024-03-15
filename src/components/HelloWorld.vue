@@ -26,13 +26,17 @@ import { ref, computed } from "vue";
 
 // let people = ref(["ali, alam, mustaqeem"])
 
-let name = ref([
-  { id: 2, username: 'jane_smith', email: 'jane@example.com', role: 'user'},
-  { id: 3, username: 'bob_jones', email: 'bob@example.com', role: 'admin'},
-  { id: 4, username: 'alice_wonder', email: 'alice@example.com', role: 'user'},
-  { id: 5, username: 'charlie_brown', email: 'charlie@example.com', role: 'user' },
-  { id: 6, username: 'emily_white', email: 'emily@example.com', role: 'admin' }
-])
+// let name = ref([
+//   { id: 2, username: 'jane_smith', email: 'jane@example.com', role: 'user'},
+//   { id: 3, username: 'bob_jones', email: 'bob@example.com', role: 'admin'},
+//   { id: 4, username: 'alice_wonder', email: 'alice@example.com', role: 'user'},
+//   { id: 5, username: 'charlie_brown', email: 'charlie@example.com', role: 'user' },
+//   { id: 6, username: 'emily_white', email: 'emily@example.com', role: 'admin' }
+// ])
+
+let formData = ref({usernames:"", email:"", password:""})
+
+
 </script>
 
 <template>
@@ -66,9 +70,20 @@ let name = ref([
 <h1 v-else-if="pass.length < 8">weak password</h1>
 <h1 v-else>please enter correct password</h1> -->
 
-<p v-for="(person, index) in name" :key="index"> {{ person }}
+<!-- <p v-for="(person, index) in name" :key="index"> {{ person }}
     <li class="a" v-for="(inner, i) in person" :key="i">{{ inner }}</li>
-</p>
+</p> -->
+
+<form action="">
+    <input  class="q" type="text" placeholder="name" v-model="formData.usernames">
+    <input class="q" type="email" placeholder="email" v-model="formData.email">
+    <input class="q" type="password" placeholder="password" v-model="formData.password">
+    <button class="g" type="submit">Submit</button>
+</form>
+
+<h1>username: {{ formData.usernames}}</h1>
+<h1>email: {{ formData.email}}</h1>
+<h1>password: {{ formData.password }}</h1>
 </template>
 
 <style>
