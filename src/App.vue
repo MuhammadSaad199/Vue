@@ -5,7 +5,7 @@ import {ref} from 'vue'
 // import dynamicComponent from './components/dynamicComponent.vue';
 // import propValidation from './components/propValidation.vue';
 // import childComponent from './components/childComponent.vue';
-import slot from './components/slot.vue';
+import slotComponent from './components/slotComponent.vue';
 
 // const firstname = ref('Muhammad');
 // const lastName = ref('Ali');
@@ -17,6 +17,10 @@ import slot from './components/slot.vue';
 //     console.log("Email",email)
 //     console.log("Password",password)
 // }
+
+
+const name = "ali"
+const age= "34"
 
 </script>
 
@@ -36,10 +40,45 @@ import slot from './components/slot.vue';
 
 <!-- <childComponent @userInfo="formHandler"/> -->
 
+<!-- <SlotComponent>
+    <p>jsoiajijfsdoijj</p>
+    <p>contain2</p>
+</SlotComponent> -->
+
+<!-- <slotComponent>
+    <p>how are you </p>
+</slotComponent> -->
+
+<!-- <slotComponent>
+    <template #one>
+        <p>
+            THis is dhus dhus content 1
+        </p>
+    </template>
+
+    <template #default>
+        <p>
+            THis is dhus dhus content 2
+        </p>
+    </template>
+</slotComponent> -->
+
+
+<!-- <iframe
+  width="600"
+  height="450"
+  style="border:0"
+  loading="lazy"
+  allowfullscreen
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBx_vsw_tV_xA4aHONcHz94riSIaYT-ofM&q=place_id:ChIJQXjlfEXkGTkRJr8SpD-54u0">
+</iframe> -->
+
+<slotComponent
+    :name="name"
+    :age="age"
+/>
+
+
 
 
 </template>
-
-<style scoped>
-
-</style>
