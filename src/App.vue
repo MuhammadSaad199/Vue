@@ -1,10 +1,11 @@
 <script setup>
 import {ref} from 'vue'
+import { provide } from 'vue';
 // import HelloWorld from './components/HelloWorld.vue'
 // import staticComponent from './components/staticComponent.vue';
 // import dynamicComponent from './components/dynamicComponent.vue';
 // import propValidation from './components/propValidation.vue';
-// import childComponent from './components/childComponent.vue';
+import childComponent from './components/childComponent.vue';
 import slotComponent from './components/slotComponent.vue';
 
 // const firstname = ref('Muhammad');
@@ -19,12 +20,21 @@ import slotComponent from './components/slotComponent.vue';
 // }
 
 
-const name = "ali"
-const age= "34"
+// const name = "ali"
+// const age= "34"
+
+// provide ('friend', "asasd")
+// provide('age', "34")
+
+provide('friend',['ali', 'ahmed' , 'asghar', 'raza' , 'asad','aman'])
+provide('userInfo',{name:'ali', age:'39', earth:['earth','idk']})
 
 </script>
 
 <template>
+
+<slotComponent />
+    <childComponent />
 <!-- <HelloWorld /> -->
 <!-- <staticComponent    name="firstName"/>
 <dynamicComponent :first-name="firstName" :last-name="lastName"/> -->
@@ -73,12 +83,9 @@ const age= "34"
   src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBx_vsw_tV_xA4aHONcHz94riSIaYT-ofM&q=place_id:ChIJQXjlfEXkGTkRJr8SpD-54u0">
 </iframe> -->
 
-<slotComponent
+<!-- <slotComponent
     :name="name"
     :age="age"
-/>
-
-
-
+/> -->
 
 </template>

@@ -1,13 +1,15 @@
 <script setup>
-import childComponent from './childComponent.vue';
-defineProps ({
-    name: {
-        type: String
-        },
-    age: {
-            type: Number,
-        }
-})
+
+// import childComponent from './childComponent.vue';
+// defineProps ({
+//     name: {
+//         type: String
+//         },
+//     age: {
+//             type: Number,
+//         }
+// })
+
 </script>
 
 <template>
@@ -22,9 +24,13 @@ defineProps ({
 <!-- <slot name="one"></slot>
 <slot></slot> -->
 
-
-<childComponent
+<!-- <childComponent
 :name="name"
 :age="age"
 />
+
+<p>{{ name }}</p>
+<p>{{ age }}</p> -->
+
+
 </template>
