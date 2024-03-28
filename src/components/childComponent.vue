@@ -32,12 +32,12 @@ const userInfo = inject('userInfo');
     <p>{{ name }}</p>
     <p>{{ age }}</p> -->
 
-<ul v-for="(fri,index) in friend" :key="index"> 
+<!-- <ul v-for="(fri,index) in friend" :key="index"> 
     <li>{{ fri }}</li>
 </ul>
 <hr><hr><hr><hr><hr>
 <ul v-for="(info,i) in userInfo" :key="i">
     <li>{{ info }}</li>
-</ul>
+</ul> -->
  
 </template>

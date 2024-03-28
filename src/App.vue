@@ -5,8 +5,9 @@ import { provide } from 'vue';
 // import staticComponent from './components/staticComponent.vue';
 // import dynamicComponent from './components/dynamicComponent.vue';
 // import propValidation from './components/propValidation.vue';
-import childComponent from './components/childComponent.vue';
-import slotComponent from './components/slotComponent.vue';
+// import childComponent from './components/childComponent.vue';
+// import slotComponent from './components/slotComponent.vue';
+import lifeCycleHooks from './components/lifeCycleHooks.vue';
 
 // const firstname = ref('Muhammad');
 // const lastName = ref('Ali');
@@ -26,8 +27,11 @@ import slotComponent from './components/slotComponent.vue';
 // provide ('friend', "asasd")
 // provide('age', "34")
 
-provide('friend',['ali', 'ahmed' , 'asghar', 'raza' , 'asad','aman'])
-provide('userInfo',{name:'ali', age:'39', earth:['earth','idk']})
+ 
+// provide('friend',['ali', 'ahmed' , 'asghar', 'raza' , 'asad','aman'])
+// provide('userInfo',{name:'ali', age:'39', earth:['earth','idk']})
+
+const showHide = ref(true)
 
 </script>
 
@@ -87,5 +91,9 @@ provide('userInfo',{name:'ali', age:'39', earth:['earth','idk']})
     :name="name"
     :age="age"
 /> -->
+
+
+<lifeCycleHooks v-if="showHide"/><br><br>
+<button class="bg-slate-900 text-white" @click="showHide = !showHide">Show / Hide</button>
 
 </template>
