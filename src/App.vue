@@ -1,13 +1,16 @@
 <script setup>
 import {ref} from 'vue'
-import { provide } from 'vue';
+// import { provide } from 'vue';
 // import HelloWorld from './components/HelloWorld.vue'
 // import staticComponent from './components/staticComponent.vue';
 // import dynamicComponent from './components/dynamicComponent.vue';
 // import propValidation from './components/propValidation.vue';
 // import childComponent from './components/childComponent.vue';
 // import slotComponent from './components/slotComponent.vue';
-import lifeCycleHooks from './components/lifeCycleHooks.vue';
+// import lifeCycleHooks from './components/lifeCycleHooks.vue';
+// import watcherComponent from './components/watcherComponent.vue';
+import toggelComponent from './components/toggleComponent.vue';
+
 
 // const firstname = ref('Muhammad');
 // const lastName = ref('Ali');
@@ -31,14 +34,14 @@ import lifeCycleHooks from './components/lifeCycleHooks.vue';
 // provide('friend',['ali', 'ahmed' , 'asghar', 'raza' , 'asad','aman'])
 // provide('userInfo',{name:'ali', age:'39', earth:['earth','idk']})
 
-const showHide = ref(true)
+// const showHide = ref(false)
 
 </script>
 
 <template>
 
-<slotComponent />
-    <childComponent />
+<!-- <slotComponent />
+    <childComponent /> -->
 <!-- <HelloWorld /> -->
 <!-- <staticComponent    name="firstName"/>
 <dynamicComponent :first-name="firstName" :last-name="lastName"/> -->
@@ -93,7 +96,14 @@ const showHide = ref(true)
 /> -->
 
 
-<lifeCycleHooks v-if="showHide"/><br><br>
-<button class="bg-slate-900 text-white" @click="showHide = !showHide">Show / Hide</button>
+<!-- <lifeCycleHooks v-if="showHide"/><br><br>
+<button class="bg-slate-900 text-white" @click="showHide = !showHide">Show / Hide</button> -->
+
+
+<!-- <watcherComponent /> -->
+
+
+<toggelComponent />
+
 
 </template>
