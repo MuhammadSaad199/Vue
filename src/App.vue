@@ -9,8 +9,11 @@ import {ref} from 'vue'
 // import slotComponent from './components/slotComponent.vue';
 // import lifeCycleHooks from './components/lifeCycleHooks.vue';
 // import watcherComponent from './components/watcherComponent.vue';
-import toggelComponent from './components/toggleComponent.vue';
-
+// import toggelComponent from './components/toggleComponent.vue';
+// import swiper from './components/swiper.vue';
+// import countComposable from './components/countComposable.vue';
+// import directive from './components/directive.vue';
+import mainComponent from './components/mainComponent.vue';
 
 // const firstname = ref('Muhammad');
 // const lastName = ref('Ali');
@@ -103,7 +106,14 @@ import toggelComponent from './components/toggleComponent.vue';
 <!-- <watcherComponent /> -->
 
 
-<toggelComponent />
+<!-- <toggelComponent /> -->
 
 
+<!-- <swiper /> -->
+
+<!-- <countComposable /> -->
+
+<!-- <directive /> -->
+
+<mainComponent />
 </template>
